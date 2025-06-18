@@ -1,0 +1,13 @@
+#table{
+border:1px solid black;
+}
+h2{
+    font-family:"times new roman";
+    font-size:50px;
+    font-weight:100;
+    text-align:center;
+    text-decoration:underline;
+    color:blue;
+    letter-spacing:30px;
+    text-transform:uppercase;
+}
