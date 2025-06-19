@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled Movie Grid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&family=Courier+Prime&family=Montserrat:wght@500&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: auto auto auto;
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .poster {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      font-family: 'Courier Prime', monospace;
+    }
+
+    .poster img {
+      width: 100%;
+      border-radius: 10px;
+      border: 3px solid #888;
+    }
+
+    .movie-name {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      color: #4a148c;
+      background: #e1bee7;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .production-top {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      font-family: 'Montserrat', sans-serif;
+      background: #d0f0c0;
+      padding: 15px;
+      border-radius: 10px;
+      color: #2e7d32;
+    }
+
+    .cast {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      font-family: 'Roboto', sans-serif;
+      background: #bbdefb;
+      padding: 15px;
+      border-radius: 10px;
+      color: #0d47a1;
+    }
+
+    .cast ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cast li {
+      margin: 5px 0;
+      background: #e3f2fd;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+
+    .production-bottom {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      font-family: 'Pacifico', cursive;
+      background: #ffe0b2;
+      color: #e65100;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 700px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .poster, .movie-name, .production-top, .cast, .production-bottom {
+        grid-column: 1 / 2;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="poster">
+      <img src="Leo.jpg" alt="Leo Poster">
+    </div>
+
+    <div class="movie-name">
+      Leo (2023)
+    </div>
+
+    <div class="production-top">
+      <h3>Production Overview</h3>
+      <p><strong>Director:</strong> Lokesh Kanagaraj</p>
+      <p><strong>Studio:</strong> Seven Screen Studio</p>
+      <p><strong>Release:</strong> Oct 19, 2023</p>
+    </div>
+
+    <div class="cast">
+      <h3>Cast</h3>
+      <ul>
+        <li>Vijay as Leo Das</li>
+        <li>Trisha as Sathya</li>
+        <li>Sanjay Dutt as Antony Das</li>
+        <li>Arjun Sarja as Harold</li>
+        <li>Gautham Menon</li>
+      </ul>
+    </div>
+
+    <div class="production-bottom">
+      <h3>Additional Details</h3>
+      <p>Music: Anirudh Ravichander</p>
+      <p>Produced by Lalit Kumar & Jagadish</p>
+      <p>Language: Tamil</p>
+    </div>
+  </div>
+
+</body>
+</html>
